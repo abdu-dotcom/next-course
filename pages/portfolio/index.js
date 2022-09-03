@@ -1,9 +1,5 @@
 function PortfolioPage() {
-    return (
-        <div>
-            Halaman Portofolio
-        </div>
-    );
-};
+  return <div>Halaman Portofolio</div>;
+}
 
 export default PortfolioPage;
