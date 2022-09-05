@@ -2,10 +2,10 @@ import Link from "next/link";
 
 function ClientsPage() {
   const clients = [
-    { id: "1", name: "abduh"},
-    { id: "2", name: "jhon"},
-    { id: "3", name: "budi"},
-    { id: "4", name: "ryan"}
+    { id: "1", name: "abduh" },
+    { id: "2", name: "jhon" },
+    { id: "3", name: "budi" },
+    { id: "4", name: "ryan" },
   ];
   return (
     <div>
@@ -13,7 +13,14 @@ function ClientsPage() {
       <ul>
         {clients.map((client) => (
           <li key={client.id}>
-            <Link href={`clients/${client.name}`}>{client.name}</Link>
+            <Link
+              href={{
+                pathname: "/clients/[id]",
+                query: { id: client.id },
+              }}
+            >
+              {client.name}
+            </Link>
           </li>
         ))}
       </ul>
